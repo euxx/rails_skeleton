@@ -1,0 +1,40 @@
+<div class="container d-flex flex-column align-items-center">
+  <h1>Check List</h1>
+
+  <div>
+    <h5>Make sure everything is right</h5>
+    <ul>
+      <li>Webpacker</li>
+
+      <li>
+        Stimulus
+        <ul>
+          <li data-controller="hello">
+            Greet: <span data-target="hello.output"></span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="text-primary">Bootstrap</li>
+
+      <li>
+        <%= tag.span 'Popover', class: 'pr-2',
+          data: { toggle: 'popover',
+                  trigger: 'hover click',
+                  placement: 'right',
+                  content: "I'm OK" } %>
+      </li>
+
+      <li>
+        FontAwesome
+        <%= icon('fab', 'font-awesome-flag', class: 'text-secondary') %>
+      </li>
+    </ul>
+  </div>
+
+  <div class="text-center">
+    <%= link_to 'https://github.com/euxx/rails_skeleton', title: 'Rails Skeleton' do %>
+    <%= icon('fab', 'github') %>
+    <% end %>
+  </div>
+</div>
