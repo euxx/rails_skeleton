@@ -1,24 +1,11 @@
-# README
+# Rails skeleton
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails skeleton with Ruby 2.6.3 and Rails 6.0
 
-Things you may want to cover:
+In favor of
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [PostgreSQL](https://github.com/ged/ruby-pg)
+- [Webpacker](https://github.com/rails/webpacker)
+- [Stimulus](https://github.com/stimulusjs/stimulus)
+- [Bootstrap](https://github.com/twbs/bootstrap)
+- [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
