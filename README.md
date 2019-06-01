@@ -1,5 +1,7 @@
 # Rails skeleton
 
+[![Build Status](https://semaphoreci.com/api/v1/eux/rails_skeleton/branches/master/badge.svg)](https://semaphoreci.com/eux/rails_skeleton)
+
 Rails skeleton with Ruby 2.6.3 and Rails 6.0
 
 In favor of
