@@ -11,3 +11,9 @@ In favor of
 - [Stimulus](https://github.com/stimulusjs/stimulus)
 - [Bootstrap](https://github.com/twbs/bootstrap)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
+
+## Getting Started
+
+```bash
+$ bin/setup app_name=your_app_name
+```
