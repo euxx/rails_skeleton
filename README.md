@@ -16,4 +16,25 @@ In favor of
 
 ```bash
 $ bin/setup app_name=your_app_name
+$ rails test:system test
+$ rails s
 ```
+
+## Edit Things
+
+- Rename the repository to your_app_name
+
+- Edit `title`, `keywords` and `description` at HTML Head in
+  `app/views/layouts/application.html.erb`
+
+- Replace `app/webpacker/images/favicon.ico` with yours
+
+- Update README
+
+## Tips
+
+- Use webpack to manage `javascripts`, `stylesheets` and `images` assets,
+  and rename `app/javascript` to `app/webpacker` to make more sense
+
+- There's a helper `icon(style, name, text = nil, html_options = {})`
+  to generate Font Awesome icons
