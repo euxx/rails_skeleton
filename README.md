@@ -12,6 +12,8 @@ In favor of
 - [Bootstrap](https://github.com/twbs/bootstrap)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
 
+[Preview online](https://skeleton.eux.one)
+
 ## Getting Started
 
 ```bash
