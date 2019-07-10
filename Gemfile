@@ -12,6 +12,7 @@ gem 'jbuilder'
 # gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

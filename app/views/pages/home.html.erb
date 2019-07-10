@@ -16,6 +16,7 @@
       </li>
 
       <li class="text-primary">Bootstrap</li>
+      <li>Bootstrap Form</li>
 
       <li>
         <%= tag.span 'Popover', class: 'pr-2',
@@ -30,6 +31,20 @@
         <%= icon('fab', 'font-awesome-flag', class: 'text-secondary') %>
       </li>
     </ul>
+
+    <div class="mb-3">
+      <% if params[:name].present? %>
+        Hi,
+        <span class="font-weight-bold">
+          <%= params[:name].split('@').first %>
+        </span>
+      <% else %>
+        <%= bootstrap_form_tag url: '/', method: :get, layout: :inline do |f| %>
+          <%= f.text_field :name, hide_label: true, placeholder: 'Name' %>
+          <%= f.submit 'Greet', class: 'btn btn-success ml-2' %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
   <div class="text-center">

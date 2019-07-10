@@ -10,6 +10,7 @@ In favor of
 - [Webpacker](https://github.com/rails/webpacker)
 - [Stimulus](https://github.com/stimulusjs/stimulus)
 - [Bootstrap](https://github.com/twbs/bootstrap)
+- [Bootstrap Form](https://github.com/bootstrap-ruby/bootstrap_form)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
 
 [Preview online](https://skeleton.eux.one)
