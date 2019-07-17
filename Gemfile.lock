@@ -58,6 +58,12 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    authlogic (5.0.4)
+      activemodel (>= 5.2, < 6.1)
+      activerecord (>= 5.2, < 6.1)
+      activesupport (>= 5.2, < 6.1)
+      request_store (~> 1.0)
+      scrypt (>= 1.2, < 4.0)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -85,6 +91,9 @@ GEM
       factory_bot (~> 5.0.2)
       railties (>= 4.2.0)
     ffi (1.11.1)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
@@ -158,7 +167,11 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    request_store (1.4.1)
+      rack (>= 1.4)
     rubyzip (2.0.0)
+    scrypt (3.0.6)
+      ffi-compiler (>= 1.0, < 2.0)
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -204,6 +217,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  authlogic (~> 5)
   bootsnap (>= 1.4.2)
   bootstrap_form
   capybara (>= 2.15)

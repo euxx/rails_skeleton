@@ -13,6 +13,7 @@ gem 'jbuilder'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap_form'
+gem 'authlogic', '~> 5'
 
 group :development, :test do
   gem 'pry-byebug'
