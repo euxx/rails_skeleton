@@ -1,0 +1,8 @@
+<div class="container col-sm-4">
+  <%= bootstrap_form_with model: @user, local: true do |f| %>
+    <%= f.email_field :email, required: true %>
+    <%= f.password_field :password, required: true %>
+    <%= f.password_field :password_confirmation, required: true %>
+    <%= f.submit 'Sign up', class: 'btn btn-success' %>
+  <% end %>
+</div>
