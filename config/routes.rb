@@ -7,8 +7,10 @@ Rails.application.routes.draw do
     end
   end
 
+  get    'sign_up'  => 'users#new'
   get    'sign_in'  => 'user_sessions#new'
   delete 'sign_out' => 'user_sessions#destroy'
 
+  resources :users, only: :create
   resources :user_sessions, only: :create
 end
