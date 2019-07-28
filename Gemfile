@@ -14,6 +14,7 @@ gem 'jbuilder'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap_form'
 gem 'authlogic', '~> 5'
+gem 'skylight'
 
 group :development, :test do
   gem 'pry-byebug'
