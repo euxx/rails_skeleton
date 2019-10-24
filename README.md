@@ -27,6 +27,9 @@ $ rails s
 
 - Rename the repository to your_app_name
 
+- Setup credentials by following
+  [config/credentials.guide.md](https://github.com/euxx/rails_skeleton/blob/master/config/credentials.guide.md)
+
 - Edit `title`, `keywords` and `description` at HTML Head in
   `app/views/layouts/application.html.erb`
 
