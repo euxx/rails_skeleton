@@ -17,7 +17,7 @@ In favor of
 
 ## Getting Started
 
-```bash
+```sh
 $ bin/setup app_name=your_app_name
 $ rails test:system test
 $ rails s
