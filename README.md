@@ -16,6 +16,7 @@ In favor of
 - [Bootstrap Form](https://github.com/bootstrap-ruby/bootstrap_form)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
 - [Authlogic](https://github.com/binarylogic/authlogic)
+- [Sidekiq](https://github.com/mperham/sidekiq)
 
 In favor of services
 

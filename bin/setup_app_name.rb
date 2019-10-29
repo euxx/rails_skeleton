@@ -18,7 +18,6 @@ def setup_app_name
 
   replace('config/application.rb', current_name.camelize, new_name.camelize)
   replace('config/database.yml', current_name.upcase, new_name.upcase)
-  replace('config/environments/production.rb', current_name, new_name)
   replace('config/database.yml', current_name, new_name)
   replace('config/cable.yml', current_name, new_name)
   replace('package.json', current_name, new_name)
