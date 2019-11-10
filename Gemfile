@@ -16,6 +16,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap_form'
 gem 'authlogic', '~> 5'
 gem 'skylight'
+gem "sentry-raven"
 
 group :development, :test do
   gem 'pry-byebug'

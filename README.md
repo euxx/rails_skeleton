@@ -23,6 +23,7 @@ In favor of services
 - [Semaphore](https://semaphoreci.com) for CI
 - [Codacy](https://www.codacy.com) for code quality
 - [Skylight](https://www.skylight.io) for performance monitoring
+- [Sentry](https://sentry.io) for error tracking 
 
 ## Getting Started
 
