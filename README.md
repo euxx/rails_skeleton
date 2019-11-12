@@ -11,9 +11,9 @@ In favor of
 - [PostgreSQL](https://github.com/ged/ruby-pg)
 - [Webpacker](https://github.com/rails/webpacker)
 - [Stimulus](https://github.com/stimulusjs/stimulus)
-- [Rails Credentials](https://guides.rubyonrails.org/security.html#custom-credentials)
+- [Rails Credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials)
+- [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 - [Bootstrap](https://github.com/twbs/bootstrap)
-- [Bootstrap Form](https://github.com/bootstrap-ruby/bootstrap_form)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
 - [Authlogic](https://github.com/binarylogic/authlogic)
 - [Sidekiq](https://github.com/mperham/sidekiq)
@@ -23,7 +23,7 @@ In favor of services
 - [Semaphore](https://semaphoreci.com) for CI
 - [Codacy](https://www.codacy.com) for code quality
 - [Skylight](https://www.skylight.io) for performance monitoring
-- [Sentry](https://sentry.io) for error tracking 
+- [Sentry](https://sentry.io) for error tracking
 
 ## Getting Started
 
