@@ -17,6 +17,9 @@ gem 'bootstrap_form'
 gem 'authlogic', '~> 5'
 gem 'skylight'
 gem "sentry-raven"
+gem 'activestorage_qiniu',
+  git: 'https://github.com/euxx/activestorage_qiniu/',
+  branch: 'fix_retries_loading'
 
 group :development, :test do
   gem 'pry-byebug'

@@ -34,7 +34,7 @@ config.require_master_key = true
 
 Edit by the command
 ```sh
-EDITOR=vim rails credentials:edit
+$ EDITOR=vim rails credentials:edit
 ```
 
 Add API keys to the opened `credentials.yml`
