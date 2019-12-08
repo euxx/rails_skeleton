@@ -68,6 +68,11 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ahoy_matey (3.0.1)
+      activesupport (>= 5)
+      device_detector
+      geocoder (>= 1.4.5)
+      safely_block (>= 0.2.1)
     authlogic (5.0.4)
       activemodel (>= 5.2, < 6.1)
       activerecord (>= 5.2, < 6.1)
@@ -95,8 +100,10 @@ GEM
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     crass (1.0.4)
+    device_detector (1.0.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    errbase (0.2.0)
     erubi (1.9.0)
     factory_bot (5.0.2)
       activesupport (>= 4.2.0)
@@ -109,6 +116,7 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
+    geocoder (1.5.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     http-accept (1.7.0)
@@ -205,6 +213,8 @@ GEM
       netrc (~> 0.8)
     retries (0.0.5)
     rubyzip (2.0.0)
+    safely_block (0.3.0)
+      errbase (>= 0.1.1)
     scrypt (3.0.6)
       ffi-compiler (>= 1.0, < 2.0)
     selenium-webdriver (3.142.6)
@@ -267,6 +277,7 @@ PLATFORMS
 
 DEPENDENCIES
   activestorage_qiniu!
+  ahoy_matey
   authlogic (~> 5)
   bootsnap (>= 1.4.2)
   bootstrap_form

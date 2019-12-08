@@ -14,6 +14,7 @@ gem 'sidekiq'
 # gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap_form'
+gem 'ahoy_matey'
 gem 'authlogic', '~> 5'
 gem 'skylight'
 gem "sentry-raven"
