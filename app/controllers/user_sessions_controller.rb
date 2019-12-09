@@ -8,6 +8,7 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(user_session_params.to_h)
     if @user_session.save
+      ahoy.authenticate(current_user)
       redirect_to root_path
     else
       render :new
