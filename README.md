@@ -40,7 +40,8 @@ $ rails s
 - Setup credentials by following
   [config/credentials.guide.md](https://github.com/euxx/rails_skeleton/blob/master/config/credentials.guide.md)
 
-- Add necessary API keys by following `config/credentials.yml.sample`
+- Add necessary API keys by following
+  [config/credentials.yml.sample](https://github.com/euxx/rails_skeleton/blob/master/config/credentials.yml.sample)
 
 - Edit `title`, `keywords` and `description` at HTML Head in
   `app/views/layouts/application.html.erb`
