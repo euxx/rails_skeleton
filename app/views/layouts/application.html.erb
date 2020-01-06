@@ -8,7 +8,7 @@
     <meta name="description" content="Descriptive sentences with keywords and without double quotation marks around 300 characters">
 
     <%= favicon_link_tag asset_pack_path('media/images/favicon.ico') %>
-    <title>A concise sentence with keywords under 70 characters</title>
+    <title><%= full_title yield(:title) %></title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

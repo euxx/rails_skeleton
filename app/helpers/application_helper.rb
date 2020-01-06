@@ -1,4 +1,9 @@
 module ApplicationHelper
+  def full_title(page_title = '')
+    base_title = 'A concise sentence with keywords under 70 characters'
+    page_title.empty? ? base_title : "#{page_title} - #{base_title}"
+  end
+
   def icon(style, name, text = nil, html_options = {})
     text, html_options = nil, text if text.is_a?(Hash)
 
