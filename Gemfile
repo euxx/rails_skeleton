@@ -17,7 +17,8 @@ gem 'bootstrap_form'
 gem 'ahoy_matey'
 gem 'authlogic', '~> 5'
 gem 'skylight'
-gem "sentry-raven"
+gem 'sentry-raven'
+gem 'aws-sdk-s3', require: false
 
 group :development, :test do
   gem 'pry-byebug'
