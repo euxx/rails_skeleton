@@ -11,4 +11,11 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include FactoryBot::Syntax::Methods
+
+  def sign_in(user)
+    visit sign_in_path
+    fill_in 'user_session[email]', with: user.email
+    fill_in 'user_session[password]', with: user.password
+    find("input[type='submit']").click
+  end
 end
