@@ -1,4 +1,24 @@
-<header>
-  <nav>
+<header class="container mb-5 py-2">
+  <nav class="nav" role="navigation">
+    <h1 class="mb-0 mr-auto">
+      <a href="/" class="logo mr-4">Skeleton</a>
+    </h1>
+
+    <ul class="nav align-items-end mb-1">
+      <li class="mr-4">
+        <%= link_to 'Nav1', '#', class: "" %>
+      </li>
+
+      <li class="<%= current_user ? 'mr-4' : 'mr-2' %>">
+        <%= link_to 'Nav2', '#', class: "" %>
+      </li>
+
+      <% if current_user %>
+        <li>
+          <%= link_to current_user.email, sign_out_path, method: :delete,
+            data: { confirm: "确定退出？" } %>
+        </li>
+      <% end %>
+    </ul>
   </nav>
 </header>
