@@ -2,7 +2,7 @@
   "name": "rails_skeleton",
   "private": true,
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.10.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
