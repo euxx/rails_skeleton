@@ -15,7 +15,7 @@ gem 'sidekiq'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap_form'
 gem 'ahoy_matey'
-gem 'authlogic', '~> 5'
+gem 'authlogic', '~> 6'
 gem 'skylight'
 gem 'sentry-raven'
 gem 'aws-sdk-s3', require: false
