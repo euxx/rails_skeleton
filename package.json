@@ -16,7 +16,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "webpack-dev-server": "^3.3.0"
   }
 }
