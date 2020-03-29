@@ -2,21 +2,21 @@
   "name": "rails_skeleton",
   "private": true,
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.10.0",
-    "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "^4.0.0",
-    "bootstrap": "^4.4",
-    "clean-webpack-plugin": "^3.0.0",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.15.0",
-    "stimulus": "^1.1.1",
-    "turbolinks": "^5.2.0"
+    "@fortawesome/free-solid-svg-icons": "^5",
+    "@rails/actioncable": "^6",
+    "@rails/activestorage": "^6",
+    "@rails/ujs": "^6",
+    "@rails/webpacker": "^5",
+    "bootstrap": "^4",
+    "clean-webpack-plugin": "^3",
+    "jquery": "^3",
+    "popper.js": "^1",
+    "stimulus": "^1",
+    "turbolinks": "^5"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.0",
-    "webpack-dev-server": "^3.3.0"
+    "@fortawesome/fontawesome-free": "^5",
+    "webpack-dev-server": "^3"
   }
 }
