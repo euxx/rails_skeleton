@@ -37,6 +37,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_storage_validations (0.8.8)
+      rails (>= 5.2.0)
     activejob (6.0.2.2)
       activesupport (= 6.0.2.2)
       globalid (>= 0.3.6)
@@ -263,30 +265,31 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_storage_validations
   ahoy_matey
   authlogic (~> 6)
   aws-sdk-s3
-  bootsnap (>= 1.4.2)
+  bootsnap (~> 1)
   bootstrap_form
-  capybara (>= 2.15)
+  capybara
   factory_bot_rails
   jbuilder
-  listen (>= 3)
-  pg (>= 0.18, < 2.0)
+  listen
+  pg (~> 1)
   pry-byebug
   pry-rails
   puma (~> 4)
-  rails (~> 6.0.0)
-  redis (>= 4)
+  rails (~> 6)
+  redis (~> 4)
   scrypt (~> 3)
   selenium-webdriver
   sentry-raven
   sidekiq
   skylight
   spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   turbolinks (~> 5)
-  web-console (>= 3.3.0)
+  web-console
   webdrivers
   webpacker (~> 5)
 
