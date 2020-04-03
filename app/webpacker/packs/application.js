@@ -16,7 +16,8 @@ require("channels")
 const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import "controllers"
+import 'controllers'
 import 'bootstrap'
 import 'javascripts/popover'
+import '@fortawesome/fontawesome-free/js/all';
 import 'stylesheets/application'

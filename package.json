@@ -2,7 +2,7 @@
   "name": "rails_skeleton",
   "private": true,
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5",
+    "@fortawesome/fontawesome-free": "^5",
     "@rails/actioncable": "^6",
     "@rails/activestorage": "^6",
     "@rails/ujs": "^6",
@@ -16,7 +16,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5",
     "webpack-dev-server": "^3"
   }
 }
