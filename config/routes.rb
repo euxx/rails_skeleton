@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   resources :user_sessions, only: :create
 
-  mount Sidekiq::Web => '/sidekiq'
+  mount Sidekiq::Web => '/sidekiq', constraints: AuthConstraint.new
 end
