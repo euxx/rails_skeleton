@@ -19,5 +19,4 @@ const images = require.context('../images', true)
 import 'controllers'
 import 'bootstrap/dist/js/bootstrap.min'
 import 'javascripts/popover'
-import '@fortawesome/fontawesome-free/js/all';
 import 'stylesheets/application'
