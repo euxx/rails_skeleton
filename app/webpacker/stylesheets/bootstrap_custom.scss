@@ -10,7 +10,7 @@ $link-hover-decoration: underline;
 // $link-decoration:    none;
 $emphasized-link-hover-darken-percentage: 10%; // .text-success
 
-$font-family-serif:    'Times New Roman', Times, serif;;
+$font-family-serif:    'Times New Roman', Times, serif;
 $headings-font-family: $font-family-serif;
 $headings-font-weight: 600;
 // $headings-color:       #333;
@@ -20,9 +20,9 @@ $paragraph-margin-bottom: 1.5rem;
 
 // $enable-responsive-font-sizes: true;
 $heading-font-size-base: 1rem;
-$h1-font-size: $heading-font-size-base * 1.75;
-$h2-font-size: $heading-font-size-base * 1.5;
-$h3-font-size: $heading-font-size-base * 1.25;
-$h4-font-size: $heading-font-size-base * 1;
-$h5-font-size: $heading-font-size-base * 0.875;
-$h6-font-size: $heading-font-size-base * 0.75;
+$h1-font-size: $heading-font-size-base * 2;
+$h2-font-size: $heading-font-size-base * 1.75;
+$h3-font-size: $heading-font-size-base * 1.5;
+$h4-font-size: $heading-font-size-base * 1.25;
+$h5-font-size: $heading-font-size-base * 1;
+$h6-font-size: $heading-font-size-base * 0.875;
