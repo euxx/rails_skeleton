@@ -1,0 +1,8 @@
+<div class="container h-100 d-flex align-items-center justify-content-center">
+  <div class="mb-5 pb-5">
+    <%= yield %>
+
+    <%= link_to '返回上一页面，或回到主页', request.referer || root_path,
+      class: 'btn btn-outline-primary' %>
+  </div>
+</div>
