@@ -46,7 +46,7 @@ $ rails s
 - Edit `title`, `keywords` and `description` at HTML Head in
   `app/views/layouts/application.html.erb`
 
-- Replace `app/webpacker/images/favicon.ico` with yours
+- Replace `app/webpacker/images/favicon.png` with yours
 
 - Update README
 
