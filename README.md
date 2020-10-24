@@ -3,7 +3,7 @@
 [![Build Status](https://semaphoreci.com/api/v1/eux/rails_skeleton/branches/master/badge.svg)](https://semaphoreci.com/eux/rails_skeleton)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eff349d9f6a742d7bfa1f7fb8a4a3a4f)](https://www.codacy.com/manual/eux/rails_skeleton/dashboard)
 
-Rails skeleton with Ruby 2.6 and Rails 6.0
+Rails skeleton with Ruby 2.7 and Rails 6.0
 -- [preview online](https://skeleton.eux.one)
 
 In favor of
