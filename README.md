@@ -48,6 +48,8 @@ $ rails s
 
 - Replace `app/webpacker/images/favicon.png` with yours
 
+- Custom errors page in `app/views/errors/`
+
 - Update README
 
 ## Tips
