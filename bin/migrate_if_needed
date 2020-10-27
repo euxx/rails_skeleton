@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -eu
+
+if bin/rails db:migrate:status | grep '^\s\+down\s'; then
+  bin/rails db:migrate
+  echo "== Finish migrate =="
+else
+  echo "== All migrations are up =="
+fi
