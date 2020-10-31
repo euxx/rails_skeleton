@@ -19,4 +19,5 @@ const images = require.context('../images', true)
 import 'controllers'
 import 'bootstrap/dist/js/bootstrap.min'
 import 'javascripts/popover'
+import 'javascripts/fix_links_to_the_same_page'
 import 'stylesheets/application'
