@@ -5,6 +5,7 @@ if Rails.env.in?(SENTRY_ENVIRONMENTS)
     config.dsn = Rails.application.credentials.sentry_dsn
     config.excluded_exceptions = []
     config.environments = SENTRY_ENVIRONMENTS
+    config.current_environment = ENV.fetch('TAG_ENV') { 'staging' }
     config.processors -= [Raven::Processor::Cookies]
     config.processors -= [Raven::Processor::PostData]
     config.async = ->(event) { SentryJob.perform_later(event) }

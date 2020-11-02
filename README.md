@@ -43,6 +43,8 @@ $ rails s
 - Add necessary API keys by following
   [config/credentials.yml.sample](https://github.com/euxx/rails_skeleton/blob/master/config/credentials.yml.sample)
 
+- Set `TAG_ENV` environment variable to specific server environment like 'production' (default is 'staging') for Sentry and Skylight
+
 - Edit `title`, `keywords` and `description` at HTML Head in
   `app/views/layouts/application.html.erb`
 
