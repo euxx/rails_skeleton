@@ -31,5 +31,7 @@ module RailsSkeleton
     config.active_job.queue_adapter = :sidekiq
 
     config.exceptions_app = self.routes
+
+    config.time_zone = 'Beijing'
   end
 end
