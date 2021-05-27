@@ -12,7 +12,9 @@
     "jquery": "^3",
     "popper.js": "^1",
     "stimulus": "^2",
-    "turbolinks": "^5"
+    "turbolinks": "^5",
+    "webpack": "^4",
+    "webpack-cli": "^3"
   },
   "version": "0.1.0",
   "devDependencies": {
