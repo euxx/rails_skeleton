@@ -10,7 +10,7 @@
         Stimulus
         <ul>
           <li data-controller="hello">
-            Greet: <span data-target="hello.output"></span>
+            Greet: <span data-hello-target="output"></span>
           </li>
         </ul>
       </li>
@@ -19,11 +19,11 @@
       <li>Bootstrap Form</li>
 
       <li>
-        <%= tag.span 'Popover', class: 'pr-2',
-          data: { toggle: 'popover',
-                  trigger: 'hover click',
-                  placement: 'right',
-                  content: "I'm OK" } %>
+        <%= tag.span 'Popover', class: 'pe-2',
+          data: { 'bs-toggle': 'popover',
+                  'bs-trigger': 'hover click',
+                  'bs-placement': 'right',
+                  'bs-content': "I'm OK" } %>
       </li>
 
       <li>
@@ -40,8 +40,10 @@
         </span>
       <% else %>
         <%= bootstrap_form_tag url: '/', method: :get, layout: :inline do |f| %>
-          <%= f.text_field :name, hide_label: true, placeholder: 'Name' %>
-          <%= f.submit 'Greet', class: 'btn btn-success ml-2' %>
+          <div class="d-flex">
+            <%= f.text_field :name, hide_label: true, placeholder: 'Name' %>
+            <%= f.submit 'Greet', class: 'btn btn-success ms-2' %>
+          </div>
         <% end %>
       <% end %>
     </div>

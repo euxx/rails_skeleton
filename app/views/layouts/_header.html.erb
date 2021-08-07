@@ -1,11 +1,11 @@
 <header class="container mb-5 py-2">
   <nav class="nav" role="navigation">
-    <%= link_to 'Skeleton', root_path, class: 'logo h1 mb-0 mr-4' %>
+    <%= link_to 'Skeleton', root_path, class: 'logo h1 mb-0 me-4' %>
 
-    <div class="nav align-items-end ml-auto">
-      <%= link_to 'Nav1', '#', class: "mr-4" %>
+    <div class="nav align-items-end ms-auto">
+      <%= link_to 'Nav1', '#', class: "me-4" %>
 
-      <%= link_to 'Nav2', '#', class: "mr-2" %>
+      <%= link_to 'Nav2', '#', class: "me-2" %>
 
       <% if current_user %>
         <%= link_to current_user.email, sign_out_path, class: 'ml-3',
