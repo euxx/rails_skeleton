@@ -5,11 +5,11 @@ ruby '~> 3'
 
 gem 'rails', '~> 6.1'
 gem 'pg', '~> 1'
-gem 'puma', '~> 5'
+gem 'puma', '~> 6'
 gem 'webpacker', '~> 5'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder'
-gem 'redis', '~> 4'
+gem 'redis', '~> 5'
 gem 'sidekiq'
 # gem 'image_processing', '~> 1'
 gem 'aws-sdk-s3', require: false
@@ -21,6 +21,7 @@ gem 'authlogic', '~> 6'
 gem 'scrypt', '~> 3'
 gem 'skylight'
 gem 'sentry-raven'
+gem 'net-smtp'
 
 group :development, :test do
   gem 'factory_bot_rails'

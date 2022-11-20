@@ -2,7 +2,7 @@
   "name": "rails_skeleton",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5",
+    "@fortawesome/fontawesome-free": "^6",
     "@popperjs/core": "^2",
     "@rails/actioncable": "^6",
     "@rails/activestorage": "^6",
