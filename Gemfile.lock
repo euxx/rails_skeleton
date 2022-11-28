@@ -83,7 +83,7 @@ GEM
       activesupport (>= 5.2, < 7.1)
       request_store (~> 1.0)
     aws-eventstream (1.2.0)
-    aws-partitions (1.664.0)
+    aws-partitions (1.666.0)
     aws-sdk-core (3.168.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -99,7 +99,7 @@ GEM
     aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
     bindex (0.8.1)
-    bootsnap (1.14.0)
+    bootsnap (1.15.0)
       msgpack (~> 1.2)
     bootstrap_form (5.1.0)
       actionpack (>= 5.2)
@@ -143,7 +143,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jmespath (1.6.1)
+    jmespath (1.6.2)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -316,7 +316,7 @@ DEPENDENCIES
   webpacker (~> 5)
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.1.3p185
 
 BUNDLED WITH
    2.3.26
