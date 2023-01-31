@@ -10,7 +10,7 @@
     "@rails/webpacker": "^5",
     "bootstrap": "^5",
     "clean-webpack-plugin": "^3",
-    "stimulus": "^2",
+    "stimulus": "^3",
     "turbolinks": "^5",
     "webpack": "^4",
     "webpack-cli": "^3"
