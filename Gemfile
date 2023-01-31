@@ -20,7 +20,7 @@ gem 'ahoy_matey'
 gem 'authlogic', '~> 6'
 gem 'scrypt', '~> 3'
 gem 'skylight'
-gem 'sentry-raven'
+gem 'sentry-rails'
 gem 'net-smtp'
 
 group :development, :test do

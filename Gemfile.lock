@@ -128,10 +128,6 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    faraday (2.7.4)
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -231,7 +227,6 @@ GEM
     request_store (1.5.1)
       rack (>= 1.4)
     rexml (3.2.5)
-    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safely_block (0.3.0)
       errbase (>= 0.1.1)
@@ -242,8 +237,11 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
-    sentry-raven (3.1.2)
-      faraday (>= 1.0)
+    sentry-rails (5.7.0)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.7.0)
+    sentry-ruby (5.7.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     sidekiq (7.0.3)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
@@ -308,7 +306,7 @@ DEPENDENCIES
   rexml
   scrypt (~> 3)
   selenium-webdriver
-  sentry-raven
+  sentry-rails
   sidekiq
   skylight
   spring

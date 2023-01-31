@@ -1,14 +1,12 @@
 SENTRY_ENVIRONMENTS = %w[staging production]
 
 if Rails.env.in?(SENTRY_ENVIRONMENTS)
-  Raven.configure do |config|
+  Sentry.init do |config|
+    config.breadcrumbs_logger = [:active_support_logger, :http_logger]
     config.dsn = Rails.application.credentials.sentry_dsn
-    config.excluded_exceptions = []
-    config.environments = SENTRY_ENVIRONMENTS
-    config.current_environment = ENV.fetch('TAG_ENV') { 'staging' }
-    config.processors -= [Raven::Processor::Cookies]
-    config.processors -= [Raven::Processor::PostData]
-    config.async = ->(event) { SentryJob.perform_later(event) }
-    config.sanitize_fields = Rails.application.config.filter_parameters.map(&:to_s)
+    config.enabled_environments = SENTRY_ENVIRONMENTS
+    config.send_default_pii = true
+    config.sample_rate = 1.0
+    config.traces_sample_rate = 1.0
   end
 end
