@@ -1,10 +1,10 @@
 # Rails skeleton
 
-[![Build Status](https://semaphoreci.com/api/v1/eux/rails_skeleton/branches/master/badge.svg)](https://semaphoreci.com/eux/rails_skeleton)
+[![Github Actions](https://github.com/euxx/rails_skeleton/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/euxx/rails_skeleton/actions/workflows/ci.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/eff349d9f6a742d7bfa1f7fb8a4a3a4f)](https://www.codacy.com/manual/eux/rails_skeleton/dashboard)
 
 Rails skeleton with Ruby 3 and Rails 7
--- [preview online](https://skeleton.eux.one)
+<!-- -- [preview online](https://skeleton.eux.one) -->
 
 In favor of
 
@@ -20,7 +20,7 @@ In favor of
 
 In favor of services
 
-- [Semaphore](https://semaphoreci.com) for CI
+- [Github Actions](https://github.com/features/actions) for CI
 - [Codacy](https://www.codacy.com) for code quality
 - [Skylight](https://www.skylight.io) for performance monitoring
 - [Sentry](https://sentry.io) for error tracking
