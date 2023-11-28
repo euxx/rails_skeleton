@@ -2,9 +2,16 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - main
+      - master
+      - 'releases/**'
+
   pull_request:
-    branches: [ master ]
+    branches:
+      - main
+      - master
+      - 'releases/**'
 
 jobs:
   test:
@@ -57,6 +64,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
