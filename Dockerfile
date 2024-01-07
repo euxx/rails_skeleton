@@ -13,6 +13,7 @@ WORKDIR /rails
 ENV BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development:test" \
+    LITESTACK_DATA_PATH="/data" \
     RAILS_ENV="production"
 
 # Update gems and bundler
@@ -27,7 +28,7 @@ FROM base as prebuild
 RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential curl libpq-dev libyaml-dev node-gyp pkg-config python-is-python3
+    apt-get install --no-install-recommends -y build-essential curl libyaml-dev node-gyp pkg-config python-is-python3
 
 
 FROM prebuild as node
@@ -83,7 +84,7 @@ FROM base
 RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl postgresql-client
+    apt-get install --no-install-recommends -y curl libsqlite3-0
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle
@@ -92,14 +93,18 @@ COPY --from=build /rails /rails
 # Run and own only the runtime files as a non-root user for security
 RUN groupadd --system --gid 1000 rails && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
-    chown -R 1000:1000 db log storage tmp
+    mkdir /data && \
+    chown -R 1000:1000 db log storage tmp /data
 USER 1000:1000
 
 # Deployment options
-ENV RUBY_YJIT_ENABLE="1"
+ENV DATABASE_URL="sqlite3:///data/production.sqlite3" \
+    RUBY_YJIT_ENABLE="1"
 
 # Entrypoint sets up the container.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
+VOLUME /data
+CMD ["./bin/rails", "server"]
