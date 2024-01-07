@@ -1,0 +1,28 @@
+// $body-bg: #faf7ee;
+// $body-color: $gray-900;
+
+$light:   #adb5bd;
+// $primary: #17a2b8;
+
+// $link-color:            $primary;
+// $link-hover-color:      darken($link-color, 10%);
+$link-hover-decoration: underline;
+// $link-decoration:    none;
+$emphasized-link-hover-darken-percentage: 10%; // .text-success
+
+$font-family-serif:    'Times New Roman', Times, serif;
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 600;
+// $headings-color:       #333;
+// $headings-line-height: 1.2;
+// $headings-margin-bottom: 2rem;
+$paragraph-margin-bottom: 1.5rem;
+
+// $enable-responsive-font-sizes: true;
+$heading-font-size-base: 1rem;
+$h1-font-size: $heading-font-size-base * 2;
+$h2-font-size: $heading-font-size-base * 1.75;
+$h3-font-size: $heading-font-size-base * 1.5;
+$h4-font-size: $heading-font-size-base * 1.25;
+$h5-font-size: $heading-font-size-base * 1;
+$h6-font-size: $heading-font-size-base * 0.875;

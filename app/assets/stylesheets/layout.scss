@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+header nav {
+  .logo:hover {
+    text-decoration: none;
+  }
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+}
