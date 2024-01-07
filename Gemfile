@@ -17,7 +17,7 @@ gem 'active_storage_validations'
 gem 'bootsnap', '~> 1', require: false
 gem 'bootstrap_form'
 gem 'ahoy_matey'
-gem 'authlogic', '~> 6', git: 'https://github.com/lsylvester/authlogic', branch: 'rails-71'
+gem 'authlogic', '~> 6'
 gem 'scrypt', '~> 3'
 gem 'skylight'
 gem 'sentry-rails'
