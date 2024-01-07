@@ -30,7 +30,7 @@ In favor of services
 
 ```sh
 $ bin/setup app_name=your_app_name
-$ rails test:system test
+$ rails test:all
 $ rails s
 ```
 
