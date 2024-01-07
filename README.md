@@ -9,8 +9,9 @@ Rails skeleton with Ruby 3 and Rails 7
 In favor of
 
 - [PostgreSQL](https://github.com/ged/ruby-pg)
-- [Webpacker](https://github.com/rails/webpacker)
-- [Stimulus](https://github.com/stimulusjs/stimulus)
+- [esbuild](https://github.com/evanw/esbuild)
+- [Turbo](https://github.com/hotwired/stimulus-rails)
+- [Stimulus](https://github.com/hotwired/turbo-rails)
 - [Rails Credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials)
 - [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 - [Bootstrap](https://github.com/twbs/bootstrap)
@@ -48,16 +49,13 @@ $ rails s
 - Edit `title`, `keywords` and `description` at HTML Head in
   `app/views/layouts/application.html.erb`
 
-- Replace `app/webpacker/images/favicon.png` with yours
+- Replace `app/assets/images/favicon.png` with yours
 
 - Custom errors page in `app/views/errors/`
 
 - Update README
 
 ## Tips
-
-- Use webpack to manage `javascripts`, `stylesheets` and `images` assets,
-  and rename `app/javascript` to `app/webpacker` to make more sense
 
 - There's a helper `icon(style, name, text = nil, html_options = {})`
   to generate Font Awesome icons

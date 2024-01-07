@@ -7,14 +7,14 @@
     <meta name="keywords" content="key words">
     <meta name="description" content="Descriptive sentences with keywords and without double quotation marks around 300 characters">
 
-    <%= favicon_pack_tag 'favicon.png' %>
+    <%= favicon_link_tag 'favicon.png' %>
     <title><%= full_title yield(:title) %></title>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body class="d-flex flex-column h-100">

@@ -2,22 +2,32 @@
   "name": "rails_skeleton",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7",
     "@fortawesome/fontawesome-free": "^6",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.0-beta",
     "@popperjs/core": "^2",
     "@rails/actioncable": "^7",
     "@rails/activestorage": "^7",
     "@rails/ujs": "^7",
-    "@rails/webpacker": "^5",
+    "autoprefixer": "^10",
     "bootstrap": "^5",
-    "clean-webpack-plugin": "^3",
-    "stimulus": "^3",
-    "turbolinks": "^5",
-    "webpack": "^4",
-    "webpack-cli": "^3"
+    "bootstrap-icons": "^1",
+    "esbuild": "^0.19",
+    "nodemon": "^3",
+    "postcss": "^8",
+    "postcss-cli": "^11",
+    "sass": "^1"
   },
   "version": "0.1.0",
-  "devDependencies": {
-    "webpack-dev-server": "^3"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
+    "build:css:compile": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
+    "build:css": "yarn build:css:compile && yarn build:css:prefix",
+    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
