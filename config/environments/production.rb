@@ -65,10 +65,12 @@ Rails.application.configure do
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :litecache
+
+  config.active_record.sqlite3_production_warning=false
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter     = :resque
+  config.active_job.queue_adapter = :litejob
   # config.active_job.queue_name_prefix = "app_name_production"
 
   config.action_mailer.perform_caching = false

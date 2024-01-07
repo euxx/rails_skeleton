@@ -8,7 +8,7 @@ Rails skeleton with Ruby 3 and Rails 7
 
 In favor of
 
-- [PostgreSQL](https://github.com/ged/ruby-pg)
+- [Litestack](https://github.com/oldmoe/litestack)
 - [esbuild](https://github.com/evanw/esbuild)
 - [Turbo](https://github.com/hotwired/stimulus-rails)
 - [Stimulus](https://github.com/hotwired/turbo-rails)
