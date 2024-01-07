@@ -4,6 +4,8 @@
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7",
     "@fortawesome/fontawesome-free": "^6",
+    "@hotwired/stimulus": "^3",
+    "@hotwired/turbo-rails": "^8.0.0-beta",
     "@popperjs/core": "^2",
     "@rails/actioncable": "^7",
     "@rails/activestorage": "^7",

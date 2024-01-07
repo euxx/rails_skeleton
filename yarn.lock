@@ -1119,10 +1119,23 @@
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus-webpack-helpers/-/stimulus-webpack-helpers-1.0.1.tgz#4cd74487adeca576c9865ac2b9fe5cb20cef16dd"
   integrity sha512-wa/zupVG0eWxRYJjC1IiPBdt3Lruv0RqGN+/DTMmUWUyMAEB27KXmVY6a8YpUVTM7QwVuaLNGW4EqDgrS2upXQ==
 
-"@hotwired/stimulus@^3.2.2":
+"@hotwired/stimulus@^3", "@hotwired/stimulus@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.2.tgz#071aab59c600fed95b97939e605ff261a4251608"
   integrity sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A==
+
+"@hotwired/turbo-rails@^8.0.0-beta":
+  version "8.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-8.0.0-beta.2.tgz#691f8e05ad97f4c192953c4d14d5c288badb3498"
+  integrity sha512-t/e2FvOrhkDOWygsxqJ/drCz74j16hfq3wobzST9qFp7wBZXbGuw0dxB7sPpC+4I9s726KKR5ZaN+D8zaaGfPg==
+  dependencies:
+    "@hotwired/turbo" "^8.0.0-beta.2"
+    "@rails/actioncable" "^7.0"
+
+"@hotwired/turbo@^8.0.0-beta.2":
+  version "8.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-8.0.0-beta.2.tgz#f9d01a0ca788ed5bf78a1746e06c3244af2b7535"
+  integrity sha512-Ewdz4m+rlBXiqU8hXC9qjrA6/gaYlwUWbab8M/+/PW3KEoZ36pqvLt4l7wEXELPk699bRXVFS08mt3icJ0idfg==
 
 "@jridgewell/gen-mapping@^0.3.0", "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
@@ -1206,7 +1219,7 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-"@rails/actioncable@^7":
+"@rails/actioncable@^7", "@rails/actioncable@^7.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.1.2.tgz#d261ff4b72844f5af496671346ec478798f4ac2c"
   integrity sha512-KGziTZfbmGm8/fHOpj515xupbYU+49hsp4etfdpoDJ/CEY2bRZR0cyFcJkpK6n0t/sxOHNWY6bo9vSgXZvT7Mg==
