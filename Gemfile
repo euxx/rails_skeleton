@@ -36,6 +36,7 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+  gem 'dockerfile-rails'
 end
 
 group :test do
