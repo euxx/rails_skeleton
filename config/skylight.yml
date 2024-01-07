@@ -1,6 +1,5 @@
 ---
 # The authentication token for the application.
 authentication: <%= Rails.application.credentials.skylight_authentication %>
-enable_sidekiq: true
 production:
   env: <%= ENV.fetch('TAG_ENV') { 'staging' } %>
