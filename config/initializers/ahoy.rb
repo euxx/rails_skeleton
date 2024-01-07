@@ -4,11 +4,7 @@ end
 # set to true for JavaScript tracking
 Ahoy.api = false
 
-Ahoy.track_bots = true
-Ahoy.cookie_domain = :all
-Ahoy.visit_duration = 6.hours
-
-IPS = %w[192.168.1.1]
-Ahoy.exclude_method = lambda do |_controller, request|
-  request&.ip ? request.ip.in?(IPS) : true
-end
+# set to true for geocoding (and add the geocoder gem to your Gemfile)
+# we recommend configuring local geocoding as well
+# see https://github.com/ankane/ahoy#geocoding
+Ahoy.geocode = false
