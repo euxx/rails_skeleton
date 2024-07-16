@@ -24,7 +24,6 @@ gem 'scrypt', '~> 3'
 gem 'skylight'
 gem 'sentry-rails'
 gem 'net-smtp'
-gem 'net-pop', github: 'ruby/net-pop'
 
 group :development, :test do
   gem 'factory_bot_rails'
