@@ -4,7 +4,7 @@ class User < ApplicationRecord
     end
 
   validates :email,
-    format: { with: /@/, message: "should look like an email address." },
+    format: { with: URI::MailTo::EMAIL_REGEXP, message: "should look like an email address." },
     length: { maximum: 100 },
     uniqueness: { case_sensitive: false, if: :will_save_change_to_email? }
 

@@ -1,0 +1,19 @@
+# Omakase Ruby styling for Rails
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
+
+# Overwrite or add rules to create your own house style
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+  Enabled: false
+
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_newline
+  Exclude:
+    - config/initializers/_app_name.rb
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma

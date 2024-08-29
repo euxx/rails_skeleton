@@ -29,6 +29,8 @@ gem 'net-smtp'
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'pry-byebug'
+  gem 'brakeman', require: false
+  gem 'rubocop-rails-omakase', require: false
 end
 
 group :development do

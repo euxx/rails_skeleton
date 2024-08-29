@@ -45,24 +45,25 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: .ruby-version
           bundler-cache: true
 
       - name: Install PostgreSQL
         run: sudo apt-get -yqq install libpq-dev
 
-      - name: Run bundle install
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
-
-      - name: Run yarn install
-        run: yarn install
-
-      - name: Setup Database
-        run: bin/rails db:schema:load
-
       - name: Run tests
-        run: bin/rails test:all
+        env:
+          RAILS_ENV: test
+        run: bin/rails db:test:prepare test:all
+
+      - name: Keep screenshots from failed system tests
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: screenshots
+          path: ${{ github.workspace }}/tmp/screenshots
+          if-no-files-found: ignore
+
 
   lint:
     runs-on: ubuntu-latest
@@ -74,9 +75,30 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
+          ruby-version: .ruby-version
           bundler-cache: true
 
       - name: Security audit dependencies
         run: |
           gem install bundler-audit
           bundler-audit --update
+
+      - name: Lint code for consistent style
+        run: bin/rubocop -f github
+
+
+  scan_ruby:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        run: bin/brakeman --no-pager
