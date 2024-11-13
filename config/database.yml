@@ -22,8 +22,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: rails_skeleton_development
+  primary: &primary_development
+    <<: *default
+    database: rails_skeleton_development
+  queue:
+    <<: *primary_development
+    database: rails_skeleton_development_queue
+    migrations_paths: db/queue_migrate
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -79,7 +84,12 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: rails_skeleton_production
-  username: rails_skeleton
-  password: <%= ENV["RAILS_SKELETON_DATABASE_PASSWORD"] %>
+  primary: &primary_production
+    <<: *default
+    database: rails_skeleton_production
+    username: rails_skeleton
+    password: <%= ENV["RAILS_SKELETON_DATABASE_PASSWORD"] %>
+  queue:
+    <<: *primary_production
+    database: rails_skeleton_production_queue
+    migrations_paths: db/queue_migrate

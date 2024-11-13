@@ -1,6 +1,6 @@
-require 'sidekiq/web'
-
 Rails.application.routes.draw do
+  mount MissionControl::Jobs::Engine, at: '/jobs'
+
   root 'pages#home'
 
   get    'sign_in'  => 'sessions#new'
@@ -8,8 +8,6 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create]
   resources :passwords, param: :token
-
-  mount Sidekiq::Web => '/sidekiq', constraints: AuthConstraint.new
 
   get '/404' => 'errors#not_found'
   get '/422' => 'errors#unprocessable_entity'
