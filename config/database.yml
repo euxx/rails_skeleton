@@ -25,6 +25,10 @@ development:
   primary: &primary_development
     <<: *default
     database: rails_skeleton_development
+  cache:
+    <<: *primary_development
+    database: rails_skeleton_development_cache
+    migrations_paths: db/cache_migrate
   queue:
     <<: *primary_development
     database: rails_skeleton_development_queue
@@ -89,6 +93,10 @@ production:
     database: rails_skeleton_production
     username: rails_skeleton
     password: <%= ENV["RAILS_SKELETON_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    database: rails_skeleton_production_cache
+    migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
     database: rails_skeleton_production_queue

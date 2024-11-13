@@ -17,6 +17,7 @@ In favor of
 - [Bootstrap](https://github.com/twbs/bootstrap)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
 - [Rails Authentication Generator](https://www.bigbinary.com/blog/rails-8-introduces-a-basic-authentication-generator)
+- [Solid Cache](https://github.com/rails/solid_cache)
 - [Solid Queue](https://github.com/rails/solid_queue)
 
 In favor of services

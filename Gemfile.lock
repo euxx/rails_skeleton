@@ -280,10 +280,6 @@ GEM
       ffi (~> 1.0)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    redis (5.3.0)
-      redis-client (>= 0.22.0)
-    redis-client (0.22.2)
-      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.11)
       io-console (~> 0.5)
@@ -337,6 +333,10 @@ GEM
       concurrent-ruby (~> 1.0, >= 1.0.2)
     skylight (6.0.4)
       activesupport (>= 5.2.0)
+    solid_cache (1.0.6)
+      activejob (>= 7.2)
+      activerecord (>= 7.2)
+      railties (>= 7.2)
     solid_queue (1.0.1)
       activejob (>= 7.1)
       activerecord (>= 7.1)
@@ -400,12 +400,12 @@ DEPENDENCIES
   pry-rails
   puma (~> 6)
   rails (~> 8)
-  redis (~> 5)
   rubocop-rails-omakase
   scrypt (~> 3)
   selenium-webdriver
   sentry-rails
   skylight
+  solid_cache (~> 1)
   solid_queue (~> 1)
   spring
   spring-watcher-listen
