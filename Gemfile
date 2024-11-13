@@ -19,8 +19,7 @@ gem 'active_storage_validations'
 gem 'bootsnap', '~> 1', require: false
 gem 'bootstrap_form'
 gem 'ahoy_matey'
-# gem 'authlogic', '~> 6'
-gem "authlogic", github: "binarylogic/authlogic", ref: "refs/pull/770/head"
+gem 'bcrypt', '~> 3'
 gem 'scrypt', '~> 3'
 gem 'skylight'
 gem 'sentry-rails'

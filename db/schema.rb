@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_07_152744) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_13_033520) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -84,28 +84,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_07_152744) do
     t.index ["visit_token"], name: "index_ahoy_visits_on_visit_token", unique: true
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "crypted_password"
-    t.string "password_salt"
-    t.string "persistence_token"
-    t.string "single_access_token"
-    t.string "perishable_token"
-    t.integer "login_count", default: 0, null: false
-    t.integer "failed_login_count", default: 0, null: false
-    t.datetime "last_request_at", precision: nil
-    t.datetime "current_login_at", precision: nil
-    t.datetime "last_login_at", precision: nil
-    t.string "current_login_ip"
-    t.string "last_login_ip"
+  create_table "sessions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "ip"
+    t.string "user_agent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sessions_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["perishable_token"], name: "index_users_on_perishable_token", unique: true
-    t.index ["persistence_token"], name: "index_users_on_persistence_token", unique: true
-    t.index ["single_access_token"], name: "index_users_on_single_access_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "sessions", "users"
 end

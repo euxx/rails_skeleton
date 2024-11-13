@@ -1,8 +1,9 @@
 <div class="container col-sm-4">
-  <%= bootstrap_form_with model: @user_session, local: true do |f| %>
+  <%= bootstrap_form_with model: Session.new, local: true do |f| %>
     <%= f.email_field :email, required: true %>
     <%= f.password_field :password, required: true %>
     <%= f.check_box :remember_me %>
     <%= f.submit 'Sign in', class: 'btn btn-success' %>
   <% end %>
+  <%= link_to 'Forgot password?', new_password_path %>
 </div>

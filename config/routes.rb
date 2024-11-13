@@ -3,10 +3,11 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   root 'pages#home'
 
-  get    'sign_in'  => 'user_sessions#new'
-  delete 'sign_out' => 'user_sessions#destroy'
+  get    'sign_in'  => 'sessions#new'
+  delete 'sign_out' => 'sessions#destroy'
 
-  resources :user_sessions, only: :create
+  resources :sessions, only: [:new, :create]
+  resources :passwords, param: :token
 
   mount Sidekiq::Web => '/sidekiq', constraints: AuthConstraint.new
 

@@ -1,0 +1,10 @@
+
+<div class="container col-sm-4">
+  <h1>Forgot your password?</h1>
+
+  <%= bootstrap_form_with url: passwords_path , local: true do |f| %>
+    <%= f.email_field :email, required: true, value: params[:email],
+      autofocus: true, autocomplete: 'username' %>
+    <%= f.submit 'Email reset instructions', class: 'btn btn-success' %>
+  <% end %>
+</div>

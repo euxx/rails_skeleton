@@ -16,7 +16,7 @@ In favor of
 - [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 - [Bootstrap](https://github.com/twbs/bootstrap)
 - [FontAwesome](https://github.com/FortAwesome/font-awesome-sass)
-- [Authlogic](https://github.com/binarylogic/authlogic)
+- [Rails Authentication Generator](https://www.bigbinary.com/blog/rails-8-introduces-a-basic-authentication-generator)
 - [Sidekiq](https://github.com/mperham/sidekiq)
 
 In favor of services

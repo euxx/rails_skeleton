@@ -1,17 +1,14 @@
 class User < ApplicationRecord
-  acts_as_authentic do |c|
-      c.crypto_provider = ::Authlogic::CryptoProviders::SCrypt
-    end
+  has_secure_password
+  has_many :sessions, dependent: :destroy
+
+  normalizes :email, with: ->(e) { e.strip.downcase }
 
   validates :email,
-    format: { with: URI::MailTo::EMAIL_REGEXP, message: "should look like an email address." },
+    format: { with: URI::MailTo::EMAIL_REGEXP, message: 'should look like an email address.' },
     length: { maximum: 100 },
     uniqueness: { case_sensitive: false, if: :will_save_change_to_email? }
 
-  validates :password,
-    confirmation: { if: :require_password? },
-    length: { minimum: 8, if: :require_password? }
-
-  validates :password_confirmation,
-    length: { minimum: 8, if: :require_password? }
+  validates :password, length: { minimum: 8 }, if: -> { password.present? }
+  validates :password_confirmation, length: { minimum: 8 }, if: -> { password_confirmation.present? }
 end
