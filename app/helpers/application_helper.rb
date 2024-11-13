@@ -14,4 +14,12 @@ module ApplicationHelper
     html = content_tag(:i, nil, html_options)
     text.blank? ? html : html << ' ' << text.to_s
   end
+
+  def alert_name(type)
+    case type
+    when 'notice' then 'success'
+    when 'alert' then 'warning'
+    else 'info'
+    end
+  end
 end
