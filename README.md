@@ -8,7 +8,7 @@ Rails skeleton with Ruby 3 and Rails 8
 
 In favor of
 
-- [PostgreSQL](https://github.com/ged/ruby-pg)
+- [SQLite3](https://github.com/sqlite/sqlite)
 - [esbuild](https://github.com/evanw/esbuild)
 - [Turbo](https://github.com/hotwired/stimulus-rails)
 - [Stimulus](https://github.com/hotwired/turbo-rails)

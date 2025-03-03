@@ -21,22 +21,6 @@ jobs:
 
     env:
       RAILS_ENV: test
-      DATABASE_URL: postgres://user:password@localhost:5432/db
-
-    services:
-      postgres:
-        image: postgres
-        env:
-          POSTGRES_DB: db
-          POSTGRES_USER: user
-          POSTGRES_PASSWORD: password
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     steps:
       - name: Checkout code
@@ -47,9 +31,6 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
-
-      - name: Install PostgreSQL
-        run: sudo apt-get -yqq install libpq-dev
 
       - name: Run tests
         env:
