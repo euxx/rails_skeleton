@@ -4,9 +4,9 @@
 options:
   cache: true
   fullstaq: true
-  jemalloc: true
   label:
     fly_launch_runtime: rails
   parallel: true
   prepare: false
+  sqlite3: true
   yjit: true
