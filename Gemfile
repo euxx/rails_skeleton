@@ -19,7 +19,6 @@ gem 'aws-sdk-s3', require: false
 gem 'active_storage_validations'
 gem 'bootsnap', '~> 1', require: false
 gem 'bootstrap_form'
-gem 'ahoy_matey'
 gem 'bcrypt', '~> 3'
 gem 'scrypt', '~> 3'
 gem 'skylight'
