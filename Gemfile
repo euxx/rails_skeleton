@@ -5,7 +5,7 @@ ruby '~> 3'
 
 gem 'rails', '~> 8'
 gem 'sqlite3', '~> 2'
-gem 'puma', '~> 6'
+gem 'puma', '~> 7'
 gem 'propshaft'
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
