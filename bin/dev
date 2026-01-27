@@ -1,2 +1,14 @@
-#!/usr/bin/env ruby
-exec "./bin/rails", "server", *ARGV
+#!/usr/bin/env bash
+
+# Check and install foreman if not installed
+if ! command -v foreman &> /dev/null; then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+# Start background processes (excluding web) via foreman
+# This allows binding.irb to work in the foreground Rails server
+foreman start -f Procfile.dev -m all=1,web=0 <&0 &
+
+# Start Rails server in foreground to allow interactive debugging
+exec bin/rails server "$@"
