@@ -20,7 +20,6 @@ gem 'active_storage_validations'
 gem 'bootsnap', '~> 1', require: false
 gem 'bootstrap_form'
 gem 'bcrypt', '~> 3'
-gem 'scrypt', '~> 3'
 gem 'skylight'
 gem 'sentry-rails'
 gem 'net-smtp'
