@@ -44,10 +44,15 @@ module Authentication
     redirect_to root_path, notice: 'Already signed in' if current_user
   end
 
-  def start_new_session_for(user)
+  def start_new_session_for(user, remember: false)
     user.sessions.create!(user_agent: request.user_agent, ip: request.remote_ip).tap do |session|
       Current.session = session
-      cookies.signed.permanent[:session_id] = { value: session.id, httponly: true, same_site: :lax }
+      cookie_options = { value: session.id, httponly: true, same_site: :lax }
+      if remember
+        cookies.signed.permanent[:session_id] = cookie_options
+      else
+        cookies.signed[:session_id] = cookie_options
+      end
     end
   end
 
