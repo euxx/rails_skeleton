@@ -7,6 +7,6 @@ if Rails.env.in?(SENTRY_ENVIRONMENTS)
     config.enabled_environments = SENTRY_ENVIRONMENTS
     config.send_default_pii = true
     config.sample_rate = 1.0
-    config.traces_sample_rate = 1.0
+    config.traces_sample_rate = ENV.fetch("SENTRY_TRACES_SAMPLE_RATE", 0.1).to_f
   end
 end
