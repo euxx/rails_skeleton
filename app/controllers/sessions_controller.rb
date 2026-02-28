@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       start_new_session_for(user, remember: params[:session][:remember_me] == "1")
       redirect_to after_authentication_url
     else
-      redirect_to :new
+      redirect_to new_session_path, alert: 'Invalid email or password.'
     end
   end
 
