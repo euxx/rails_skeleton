@@ -22,4 +22,16 @@ module ApplicationHelper
     else 'info'
     end
   end
+
+  def safe_referer_or_root
+    referer = request.referer
+    return root_path if referer.blank?
+
+    uri = URI.parse(referer)
+    return root_path if uri.host.present? && uri.host != request.host
+
+    uri.request_uri.presence || root_path
+  rescue URI::InvalidURIError
+    root_path
+  end
 end

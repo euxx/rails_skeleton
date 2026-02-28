@@ -2,7 +2,7 @@
   <div class="mb-5 pb-5">
     <%= yield %>
 
-    <%= link_to '返回上一页面，或回到主页', request.referer || root_path,
+    <%= link_to '返回上一页面，或回到主页', safe_referer_or_root,
       class: 'btn btn-outline-primary' %>
   </div>
 </div>
