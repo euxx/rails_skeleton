@@ -8,8 +8,8 @@
       <%= link_to 'Nav2', '#', class: "me-2" %>
 
       <% if current_user %>
-        <%= link_to current_user.email, sign_out_path, class: 'ml-3',
-          method: :delete, data: { confirm: "确定退出？" } %>
+        <%= button_to current_user.email, sign_out_path, method: :delete,
+          class: 'btn btn-link ml-3', data: { turbo_confirm: "确定退出？" } %>
       <% end %>
     </div>
   </nav>
