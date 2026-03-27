@@ -1,4 +1,5 @@
 require_relative "boot"
+require_relative "../app/middleware/bot_filter"
 
 require "rails/all"
 
@@ -27,5 +28,13 @@ module RailsSkeleton
     config.exceptions_app = self.routes
 
     config.time_zone = 'Beijing'
+
+    # Insert BotFilter before Skylight so bot requests never reach Skylight's
+    # middleware and aren't counted against the free-tier usage quota.
+    # Skip in test environment: Selenium/headless Chrome UA would be blocked.
+    unless Rails.env.test?
+      config.middleware.insert_before 0, BotFilter
+      config.skylight.middleware_position = { after: BotFilter }
+    end
   end
 end
