@@ -3,14 +3,23 @@
 ## Update Ruby
 
 ```sh
-$ mise use -g ruby@3.4.7
+$ mise use -g ruby@4.0.0
 $ gem update --system
 $ gem install bundler
 $ bundle update --bundler
 $ bundle update --ruby
 
-# update version in .ruby-version, Dockerfile
-# git commit -am "Update Ruby to 3.4.7"
+# Update version in .ruby-version and Dockerfile (FROM ruby:X.X.X-slim)
+# git commit -am "Update Ruby to 4.0.0"
+```
+
+## Update Node.js
+
+```sh
+$ mise use -g node@24.14.0
+
+# Update version in .node-version and Dockerfile (ARG NODE_VERSION)
+# git commit -am "Update Node.js to 24.14.0"
 ```
 
 ## Update Dependencies
