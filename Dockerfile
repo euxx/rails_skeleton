@@ -1,9 +1,8 @@
 # syntax=docker/dockerfile:1
 # check=error=true
 
-# Make sure RUBY_VERSION matches the Ruby version in .ruby-version
-ARG RUBY_VERSION=3.4.7
-FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-jemalloc-slim AS base
+# Make sure Ruby version matches .ruby-version
+FROM ruby:4.0.0-slim AS base
 
 LABEL fly_launch_runtime="rails"
 
@@ -18,7 +17,8 @@ RUN gem update --system --no-document && \
 RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl sqlite3
+    apt-get install --no-install-recommends -y curl libtcmalloc-minimal4 sqlite3
+ENV LD_PRELOAD="libtcmalloc_minimal.so.4"
 
 # Set production environment
 ENV BUNDLE_DEPLOYMENT="1" \
