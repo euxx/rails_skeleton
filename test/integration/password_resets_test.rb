@@ -10,7 +10,7 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     assert_difference -> { Session.where(user_id: user.id).count }, -2 do
       patch password_path(token), params: {
         password: 'new-password-123',
-        password_confirmation: 'new-password-123'
+        password_confirmation: 'new-password-123',
       }
     end
 
