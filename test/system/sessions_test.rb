@@ -19,7 +19,8 @@ class SessionsTest < ApplicationSystemTestCase
     fill_in 'session[password]', with: 'wrong-password'
     find("input[type='submit']").click
 
-    assert_current_path new_session_path
+    # Assert visible text first so Capybara waits for the redirect to complete
     assert_text 'Invalid email or password.'
+    assert_current_path new_session_path
   end
 end
