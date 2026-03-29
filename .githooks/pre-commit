@@ -1,0 +1,8 @@
+#!/bin/sh
+# Run RuboCop and Brakeman before committing.
+# To skip: git commit --no-verify
+
+set -e
+
+bin/rubocop --format quiet
+bin/brakeman --no-pager -q

@@ -30,3 +30,19 @@ $ yarn upgrade
 
 # git commit -am "Update dependencies"
 ```
+
+## Code Quality
+
+A pre-commit hook (`.githooks/pre-commit`) runs RuboCop and Brakeman automatically.
+Activate it once after cloning: `git config core.hooksPath .githooks`
+
+Run before committing:
+```sh
+$ bin/rubocop -A          # auto-correct lint offenses
+$ bin/brakeman --no-pager # security static analysis
+$ bin/rails test:all
+```
+
+Common RuboCop rules enforced by `rubocop-rails-omakase`:
+- `Style/TrailingCommaInHashLiteral` — multiline hashes require a trailing comma after the last item
+- `Style/TrailingCommaInArrayLiteral` — same for multiline arrays
