@@ -4,5 +4,8 @@
 
 set -e
 
+# Git hooks run in a minimal shell; prepend mise shims so the correct Ruby is used
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+
 bin/rubocop --format quiet
 bin/brakeman --no-pager -q
