@@ -10,7 +10,6 @@ class SessionsTest < ApplicationSystemTestCase
     fill_in 'session[email]', with: @user.email
     fill_in 'session[password]', with: @user.password
     find("input[type='submit']").click
-    # Assert visible text first so Capybara waits for the redirect to complete
     assert_text @user.email
     assert_current_path root_path
   end
@@ -20,8 +19,6 @@ class SessionsTest < ApplicationSystemTestCase
     fill_in 'session[email]', with: @user.email
     fill_in 'session[password]', with: 'wrong-password'
     find("input[type='submit']").click
-
-    # Assert visible text first so Capybara waits for the redirect to complete
     assert_text 'Invalid email or password.'
     assert_current_path new_session_path
   end
