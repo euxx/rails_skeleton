@@ -2,7 +2,7 @@
 # check=error=true
 
 # Make sure Ruby version matches .ruby-version
-FROM ruby:4.0.0-slim AS base
+FROM ruby:4.0.4-slim AS base
 
 LABEL fly_launch_runtime="rails"
 
