@@ -26,7 +26,7 @@ $ mise use -g node@24.14.0
 
 ```sh
 $ bundle update
-$ yarn upgrade
+$ npm update
 
 # git commit -am "Update dependencies"
 ```
